@@ -1,0 +1,58 @@
+{
+    "name": "stpi/stpigh-indexnow",
+    "description": "Lightweight IndexNow (Bing/Yandex) submission for Shopware 6 – key file, console command and daily scheduled task.",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "keywords": [
+        "shopware",
+        "shopware6",
+        "shopware-plugin",
+        "indexnow",
+        "seo",
+        "bing",
+        "yandex",
+        "indexing"
+    ],
+    "homepage": "https://stefanpilz.ltd",
+    "authors": [
+        {
+            "name": "Stefan Pilz Ltd.",
+            "email": "contact@stefanpilz.ltd",
+            "homepage": "https://stefanpilz.ltd",
+            "role": "Manufacturer"
+        }
+    ],
+    "support": {
+        "email": "plugins@stefanpilz.ltd"
+    },
+    "require": {
+        "php": "^8.2 || ^8.3 || ^8.4 || ^8.5",
+        "shopware/core": "~6.7.0",
+        "shopware/storefront": "~6.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StPiGh\\IndexNow\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "StPiGh\\IndexNow\\StPiGhIndexNow",
+        "label": {
+            "en-GB": "IndexNow (Bing/Yandex)",
+            "de-DE": "IndexNow (Bing/Yandex)"
+        },
+        "description": {
+            "en-GB": "Submits canonical URLs to IndexNow (Bing, Yandex).",
+            "de-DE": "Meldet kanonische URLs an IndexNow (Bing, Yandex)."
+        },
+        "manufacturerLink": {
+            "en-GB": "https://stefanpilz.ltd",
+            "de-DE": "https://stefanpilz.ltd"
+        },
+        "supportLink": {
+            "en-GB": "https://stefanpilz.ltd",
+            "de-DE": "https://stefanpilz.ltd"
+        }
+    }
+}
