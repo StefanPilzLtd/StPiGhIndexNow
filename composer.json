@@ -24,7 +24,9 @@
         }
     ],
     "support": {
-        "email": "plugins@stefanpilz.ltd"
+        "email": "plugins@stefanpilz.ltd",
+        "issues": "https://github.com/StefanPilzLtd/StPiGhIndexNow/issues",
+        "source": "https://github.com/StefanPilzLtd/StPiGhIndexNow"
     },
     "require": {
         "php": "^8.2 || ^8.3 || ^8.4 || ^8.5",

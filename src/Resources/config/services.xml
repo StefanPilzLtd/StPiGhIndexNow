@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="StPiGh\IndexNow\Service\KeyManager">
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument>%kernel.project_dir%</argument>
+        </service>
+
+        <service id="StPiGh\IndexNow\Service\IndexNowClient">
+            <argument type="service" id="StPiGh\IndexNow\Service\KeyManager"/>
+            <argument type="service" id="logger"/>
+        </service>
+
+        <service id="StPiGh\IndexNow\Service\UrlCollector">
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="StPiGh\IndexNow\Command\SubmitCommand">
+            <argument type="service" id="StPiGh\IndexNow\Service\UrlCollector"/>
+            <argument type="service" id="StPiGh\IndexNow\Service\IndexNowClient"/>
+            <argument type="service" id="StPiGh\IndexNow\Service\KeyManager"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <tag name="console.command"/>
+        </service>
+
+        <service id="StPiGh\IndexNow\ScheduledTask\IndexNowTask">
+            <tag name="shopware.scheduled.task"/>
+        </service>
+
+        <service id="StPiGh\IndexNow\ScheduledTask\IndexNowTaskHandler">
+            <argument type="service" id="scheduled_task.repository"/>
+            <argument type="service" id="logger"/>
+            <argument type="service" id="StPiGh\IndexNow\Service\UrlCollector"/>
+            <argument type="service" id="StPiGh\IndexNow\Service\IndexNowClient"/>
+            <argument type="service" id="StPiGh\IndexNow\Service\KeyManager"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <tag name="messenger.message_handler"/>
+        </service>
+    </services>
+</container>

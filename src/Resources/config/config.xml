@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>IndexNow</title>
+        <title lang="de-DE">IndexNow</title>
+
+        <input-field type="bool">
+            <name>enabled</name>
+            <label>Enable automatic submission (daily scheduled task)</label>
+            <label lang="de-DE">Automatische Uebermittlung aktivieren (taeglicher Task)</label>
+            <helpText lang="de-DE">Nur einschalten, wenn die Live-Domains oeffentlich erreichbar sind.</helpText>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>key</name>
+            <label>IndexNow Key (auto-generated)</label>
+            <label lang="de-DE">IndexNow-Key (automatisch erzeugt)</label>
+            <helpText lang="de-DE">Wird beim Aktivieren erzeugt. Die Datei /&lt;key&gt;.txt wird automatisch abgelegt.</helpText>
+        </input-field>
+
+        <input-field type="text">
+            <name>endpoint</name>
+            <label>IndexNow endpoint</label>
+            <label lang="de-DE">IndexNow-Endpoint</label>
+            <defaultValue>https://api.indexnow.org/indexnow</defaultValue>
+        </input-field>
+    </card>
+</config>

@@ -68,6 +68,19 @@ Once `enabled` is on, the scheduled task `stpi_indexnow.submit` runs daily and s
 2. `UrlCollector` reads canonical `seo_url` rows per `sales_channel_domain`.
 3. `IndexNowClient` POSTs `{ host, key, keyLocation, urlList }` to the endpoint.
 
+## About the author
+
+Built and maintained by **Stefan Pilz** — freelance **Shopware developer**.
+
+I develop **custom Shopware 6 plugins & themes on commission**, plus API integrations, performance optimization, SEO/GEO and ongoing shop maintenance. Available for freelance projects and long‑term collaborations.
+
+- 🌐 **Website:** [stefanpilz.ltd](https://stefanpilz.ltd)
+- ✉️ **Contact:** [contact@stefanpilz.ltd](mailto:contact@stefanpilz.ltd)
+- 🧩 **Plugin & project inquiries:** [plugins@stefanpilz.ltd](mailto:plugins@stefanpilz.ltd)
+- 🐙 **GitHub:** [@StefanPilzLtd](https://github.com/StefanPilzLtd)
+
+If this plugin is useful to you, a ⭐ on GitHub is appreciated.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
