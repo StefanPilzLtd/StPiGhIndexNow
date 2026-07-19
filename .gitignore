@@ -1,0 +1,17 @@
+# Dependencies
+/vendor/
+composer.lock
+node_modules/
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.cache
